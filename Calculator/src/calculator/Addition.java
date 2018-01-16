@@ -75,9 +75,7 @@ public class Addition extends JFrame{
     private class Numbers implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent event){
-            JButton std = (JButton) event.getSource();
-        }
-    }    
+            JButton std = (JButton) event.getSource();    
             
             if(std.equals(one))
             {
@@ -94,127 +92,153 @@ public class Addition extends JFrame{
                         stemp2=stemp1 + "1";
                         }
                     }
-                }
             }
             if(std.equals(two))
+            {
+                if(opchosen==false){
+                    if(stemp1==null){
+                        stemp1 = "2";
+                    }else{
+                        stemp1=stemp1 + "2";
+                    }
+                }else{
+                    if (stemp2==null){
+                        stemp2="2";
+                    }else{
+                        stemp2=stemp1 + "2";
+                        }
+                    }
             }
+            if(std.equals(three))
+            {
                 if(opchosen==false){
                     if(stemp1==null){
-                        stemp1="2"
-
-                            stemp2="2";
-                    }else{ 
-
-                            stemp2=stemp1  + "2";
-                        }
-                    }
-                }
-            }  
-            if(std.equals(three)){
-                if(opchosen==false){
-                    if(stemp1==null){
-                        stemp1="3";
+                        stemp1 = "3";
                     }else{
-                        if (stemp2==null){
-                            stemp2="3";
-                        }else{
-                            stemp2=stemp1 +"3";
+                        stemp1=stemp1 + "3";
+                    }
+                }else{
+                    if (stemp2==null){
+                        stemp2="3";
+                    }else{
+                        stemp2=stemp1 + "3";
                         }
                     }
-                }
-            } 
-            if(std.equals(four)){
+            }
+            if(std.equals(four))
+            {
                 if(opchosen==false){
                     if(stemp1==null){
-                        stemp1="4";
+                        stemp1 = "4";
                     }else{
-                        if (stemp2==null){
-                            stemp2="4";
-                        }else{
-                            stemp2=stemp1 +"4";
+                        stemp1=stemp1 + "4";
+                    }
+                }else{
+                    if (stemp2==null){
+                        stemp2="4";
+                    }else{
+                        stemp2=stemp1 + "4";
                         }
                     }
-                }
+            }
+            if(std.equals(five))
+            {
+                if(opchosen==false){
+                    if(stemp1==null){
+                        stemp1 = "5";
+                    }else{
+                        stemp1=stemp1 + "5";
+                    }
+                }else{
+                    if (stemp2==null){
+                        stemp2="5";
+                    }else{
+                        stemp2=stemp1 + "5";
+                        }
+                    }
+            }
+            if(std.equals(six))
+            {
+                if(opchosen==false){
+                    if(stemp1==null){
+                        stemp1 = "6";
+                    }else{
+                        stemp1=stemp1 + "6";
+                    }
+                }else{
+                    if (stemp2==null){
+                        stemp2="6";
+                    }else{
+                        stemp2=stemp1 + "6";
+                        }
+                    }
+            }
+            if(std.equals(seven))
+            {
+                if(opchosen==false){
+                    if(stemp1==null){
+                        stemp1 = "7";
+                    }else{
+                        stemp1=stemp1 + "7";
+                    }
+                }else{
+                    if (stemp2==null){
+                        stemp2="7";
+                    }else{
+                        stemp2=stemp1 + "7";
+                        }
+                    }
+            }
+            if(std.equals(eight))
+            {
+                if(opchosen==false){
+                    if(stemp1==null){
+                        stemp1 = "8";
+                    }else{
+                        stemp1=stemp1 + "8";
+                    }
+                }else{
+                    if (stemp2==null){
+                        stemp2="8";
+                    }else{
+                        stemp2=stemp1 + "8";
+                        }
+                    }
+            }
+            if(std.equals(nine))
+            {
+                if(opchosen==false){
+                    if(stemp1==null){
+                        stemp1 = "9";
+                    }else{
+                        stemp1=stemp1 + "9";
+                    }
+                }else{
+                    if (stemp2==null){
+                        stemp2="9";
+                    }else{
+                        stemp2=stemp1 + "9";
+                        }
+                    }
+            }
+            if(std.equals(zero))
+            {
+                if(opchosen==false){
+                    if(stemp1==null){
+                        stemp1 = "0";
+                    }else{
+                        stemp1=stemp1 + "0";
+                    }
+                }else{
+                    if (stemp2==null){
+                        stemp2="0";
+                     }else{
+                        stemp2=stemp1 + "0";
+                        }
+                    }
+            }
         
-            if(std.equals(five)){
-                if(opchosen==false){
-                    if(stemp1==null){
-                        stemp1="5";
-                    }else{
-                        if (stemp2==null){
-                            stemp2="5";
-                        }else{
-                            stemp2=stemp1 +"5";
-                        }
-                    }
-                }
-            }    
-            if(std.equals(six)){
-                if(opchosen==false){
-                    if(stemp1==null){
-                        stemp1="6";
-                    }else{
-                        if (stemp2==null){
-                            stemp2="6";
-                        }else{
-                            stemp2=stemp1 +"6";
-                        }
-                    }
-                }
-            }    
-            if(std.equals(seven)){
-                if(opchosen==false){
-                    if(stemp1==null){
-                        stemp1="7";
-                    }else{
-                        if (stemp2==null){
-                            stemp2="7";
-                        }else{
-                            stemp2=stemp1 +"7";
-                        }
-                    }
-                }
-            }    
-            if(std.equals(eight)){
-                if(opchosen==false){
-                    if(stemp1==null){
-                        stemp1="8";
-                    }else{
-                        if (stemp2==null){
-                            stemp2="8";
-                        }else{
-                            stemp2=stemp1 +"8";
-                        }
-                    }
-                }
-            }    
-            if(std.equals(nine)){
-                if(opchosen==false){
-                    if(stemp1==null){
-                        stemp1="9";
-                    }else{
-                        if (stemp2==null){
-                            stemp2="9";
-                        }else{
-                            stemp2=stemp1 +"9";
-                          
-                        }
-                    }
-                }
-            }    
-            if(std.equals(zero)){
-                if(opchosen==false){
-                    if(stemp1==null){
-                        stemp1="0";
-                    }else{
-                        if (stemp2==null){
-                            stemp2="0";
-                        }else{
-                            stemp2=stemp1 +"0";
-                        }
-                    }
-                }
-            }    
+
             if(opchosen==false){
                 answerfield.setText(stemp1);
             }else{
@@ -227,7 +251,8 @@ public class Addition extends JFrame{
                     answerfield.setText(stemp2);
                 }
                 }
-            
+        }
+    }    
                            
     
     class Calc implements ActionListener
@@ -240,7 +265,9 @@ public class Addition extends JFrame{
                
                     
         }
+    
     }
+}
     
     
             
