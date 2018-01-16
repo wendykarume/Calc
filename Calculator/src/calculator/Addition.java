@@ -4,12 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 public class Addition extends JFrame{
-    private final JTextField answerfield;
-    private final JButton one,two,three,four,five,six,seven,eight,nine,zero,add,subtract,multiply,divide,equals;
-    private String stemp1, stemp2, answer;
-    private final JPanel contentPanel;
-    private final boolean equalsClicked;
-    private final boolean opchosen = false;
+    private JTextField answerfield;
+    private JButton one,two,three,four,five,six,seven,eight,nine,zero,add,subtract,multiply,divide,equals;
+    private String stemp1, stemp2, sanswer;
+    double answer;
+    private JPanel contentPanel;
+    private boolean equalsClicked;
+    private boolean opchosen = false;
+    char operation = ' ';
     
     
     public Addition(){
@@ -54,11 +56,15 @@ public class Addition extends JFrame{
         equals.setPreferredSize(new Dimension(225,25));
         
         Numbers n = new Numbers ();
-        Calculator c = new Calculator ();
+        Calc c = new Calc ();
         
-        one.addActionListener(n); two.addActionListener; three.addActionListener(n); four.addActionListener(n); five.addActionListener(n); six.addActionListener(n); seven.addActionListener(n); eight.addActionListener(n); nine.addActionListener(n); zero.addActionListener(n);
+        one.addActionListener(n); two.addActionListener(n); three.addActionListener(n);
+        four.addActionListener(n); five.addActionListener(n); six.addActionListener(n);
+        seven.addActionListener(n); eight.addActionListener(n); nine.addActionListener(n);
+        zero.addActionListener(n);
         
-        add.addActionListener(c); sub.addActionListener(c); multiply.addActionListener(c); divide.addActionListener(c); equals.addActionListener(n);
+        add.addActionListener(c); subtract.addActionListener(c); multiply.addActionListener(c);
+        divide.addActionListener(c); equals.addActionListener(n);
         
         
        
@@ -260,14 +266,105 @@ public class Addition extends JFrame{
         @Override
         public void actionPerformed(ActionEvent event)
         {
-            JButton src;
-            src = (JButton) event.getSource();
+            JButton std;
+            std = (JButton) event.getSource();
+            
+            if(std.equals(add)){
+                if(stemp1==null){
+                    System.out.println("Choose your numbers first!");
+                }else
+                    if(stemp1!= null && stemp2!= null){
+                        opchosen = true;
+                        operation = '+';
+                    }else
+                     if(stemp1!= null && stemp2!= null){
+                        System.out.println("Two operations only!");
+                }
+
+            }
+            if(std.equals(subtract)){
+                if(stemp1==null){
+                    System.out.println("Choose your numbers first!");
+                }else
+                    if(stemp1!= null && stemp2!= null){
+                        opchosen = true;
+                        operation = '-';
+                    }else
+                     if(stemp1!= null && stemp2!= null){
+                        System.out.println("Two operations only!");
+                }
+
+            }
+            if(std.equals(multiply)){
+                if(stemp1==null){
+                    System.out.println("Choose your numbers first!");
+                }else
+                    if(stemp1!= null && stemp2!= null){
+                        opchosen = true;
+                        operation = '*';
+                    }else
+                     if(stemp1!= null && stemp2!= null){
+                        System.out.println("Two operations only!");
+                }
+
+            }
+            if(std.equals(divide)){
+                if(stemp1==null){
+                    System.out.println("Choose your numbers first!");
+                }else
+                    if(stemp1!= null && stemp2!= null){
+                        opchosen = true;
+                        operation = '/';
+                    }else
+                     if(stemp1!= null && stemp2!= null){
+                        System.out.println("Two operations only!");
+                }
+
+            }
+            if(std.equals(equals)){
+                if(stemp1==null){
+                    System.out.println("Choose your numbers first!");
+                }else
+                    if(stemp1!= null && stemp2!= null){
+                    System.out.println("Choose BOTH numbers first");
+                    }else
+                     if(stemp1!= null && stemp2!= null){
+                        System.out.println("Two operations only!");
+                }
+
+            }
+            
+            if(stemp1 != null && stemp2 != null){
+                double d1=0.0, d2=0.0;
+                d1 = Double.parseDouble(stemp1);
+                d2 = Double.parseDouble(stemp2);
+                switch(operation){
+                    case'+':
+                        answer= d1 + d2;
+                        break;
+                    case'-':
+                        answer= d1 - d2;
+                        break;
+                    case'/':
+                        answer= d1 / d2;
+                        break;
+                    case'*':
+                        answer= d1 * d2;
+                        break;                        
+                }
+                
+                sanswer = Double.toString(answer);
+                answerfield.setText(sanswer);
+                if(operation == '/' && d2 ==0.0){
+                    answerfield.setText("DIVIDE BY 0 ERROR");
+                }
+                
+        }
                
                     
         }
     
     }
 }
-    
-    
-            
+
+       
