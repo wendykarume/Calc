@@ -100,7 +100,10 @@ public class Addition extends JFrame{
             }
                 if(opchosen==false){
                     if(stemp1==null){
-                        stemp1="2"
+                        stemp1 = "2";
+ 
+                        
+
 
                             stemp2="2";
                     }else{ 
